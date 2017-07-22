@@ -1,12 +1,12 @@
 <?php
 /**
- * Laravel GitScrum <https://github.com/renatomarinho/laravel-gitscrum>
+ * Laravel GitScrum <https://github.com/GitScrum-Community/laravel-gitscrum>
  *
  * The MIT License (MIT)
  * Copyright (c) 2017 Renato Marinho <renato.marinho@s2move.com>
  */
 
-namespace GitScrum\Http\Controllers;
+namespace GitScrum\Http\Controllers\Web;
 
 use GitScrum\Http\Requests\CommentRequest;
 use GitScrum\Models\Comment;
@@ -15,13 +15,7 @@ class CommentController extends Controller
 {
     public function store(CommentRequest $request)
     {
-        $data = [
-            'commentable_id' => $request->commentable_id,
-            'commentable_type' => $request->commentable_type,
-            'comment' => $request->comment,
-        ];
-        Comment::create($data);
-
+        resolve('CommentService')->create($request);
         return back()->with('success', trans('gitscrum.comment-added-successfully'));
     }
 
@@ -38,10 +32,7 @@ class CommentController extends Controller
 
     public function update(CommentRequest $request, $id)
     {
-        $comment = Comment::find($id)->userActive()->firstOrFail();
-        $comment->comment = $request->comment;
-        $comment->save();
-
+        resolve('CommentService')->update($request);
         return back()->with('success', trans('gitscrum.comment-updated-successfully'));
     }
 

@@ -1,5 +1,297 @@
+<<<<<<< HEAD
 .ui.main.container.center{
   margin-top: 80px;
+=======
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+    padding-bottom: 30px;
+}
+
+a{
+  -o-transition:color .1s ease-out, background .2s ease-in;
+  -ms-transition:color .1s ease-out, background .2s ease-in;
+  -moz-transition:color .1s ease-out, background .2s ease-in;
+  -webkit-transition:color .1s ease-out, background .2s ease-in;
+  transition:color .1s ease-out, background .2s ease-in;
+}
+
+ul{
+	padding:0 0 0 0;
+}
+
+li{
+	list-style-type: none;
+}
+
+.loader-area{
+	.loader {
+		position: fixed;
+		top:0;
+		left:0;
+		z-index: 9999;
+		border-top: 4px solid transparent;
+		width: 100%;
+		-webkit-animation: topBar 2s linear infinite  alternate;
+		animation: topBar 2s linear infinite  alternate;
+	}
+}
+
+@-webkit-keyframes topBar {
+	0% {width:0px; }
+	100% { width: 100%;}
+}
+
+@keyframes topBar {
+	0% {width:0px;}
+    100% {width:100%;}
+}
+
+header{
+	height:45px;
+	.navbar-fixed-top{
+		border-bottom: 2px solid transparent;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        height:45px;
+		min-height: 45px;
+		.navbar-brand{
+			padding-top:10px;
+			i{
+				margin:0 10px 0 8px;
+				padding-right:12px;
+				border-right:1px solid transparent;
+			}
+		}
+		.avatar{
+			position: relative;
+			top:-1px;
+			width: 16px;
+			height:16px;
+			border-radius: 2px;
+			margin-right: 7px;
+			border:1px solid transparent;
+		}
+		.navbar-left,
+		.navbar-right{
+			a{
+				margin:6px 5px 0 0;
+				padding:4px 8px;
+				font-size:13px;
+				font-weight: 600;
+				border-radius: 4px;
+			}
+		}
+		.navbar-right{
+			margin-right:0px;
+			.dropdown-menu{
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+				margin: 8px 6px 0 0;
+				padding:10px 0;
+				border:1px solid transparent;
+				a{
+					margin:0;
+					padding:5px 10px;
+					font-size:12px;
+					i{
+						width:16px;
+					}
+				}
+			}
+		}
+    }
+}
+
+.breadcrumb-area{
+	height:40px;
+	padding:5px 0px;
+	margin: 0;
+	.col-lg-6{
+		padding:0 14px;
+	}
+	h3{
+		margin:8px 0 6px 0;
+		font-size: 13px;
+		a{
+			margin-right:5px;
+		}
+		span{
+			margin-left:5px;
+		}
+	}
+	button, .btn{
+		top:2px;
+		position: relative;
+    	padding: 1px 10px 3px;
+		i{
+			margin-right: 4px;
+			font-size:10px;
+		}
+	}
+	.btn-group{
+		top:1px;
+	}
+	.form-delete{
+		margin-top:2px;
+		margin-left:12px;
+		border-left:1px solid #c0c0c0;
+		button{
+			top:2px;
+			padding: 0 10px 4px 12px;
+			border-color:transparent;
+			background:transparent;
+			i{
+				font-size:14px;
+			}
+		}
+	}
+
+
+
+}
+
+.btn-outline{
+	background-color: transparent;
+	color:#c9302c;
+}
+
+.content-area{
+    margin-top: 15px;
+	.col-lg-3{
+		.progress{
+			height:12px;
+		}
+	}
+}
+
+.progress{
+	margin-bottom: 8px;
+}
+
+.progress-title{
+	text-transform: lowercase;
+	display: block;
+	margin:0 0 4px;
+}
+.progress-mini{
+	height:14px;
+}
+
+.notes, .team, .activities, .shortcuts{
+  margin:0 0 20px;
+  h4{
+      margin-bottom:10px;
+      padding-bottom:10px;
+      border-bottom: 1px solid transparent;
+  }
+}
+
+.table-sprint-backlog{
+	.details{
+		span{
+			margin-right:10px;
+		}
+	}
+}
+
+.table-repository{
+	p{
+		margin:0;
+		padding:0;
+	}
+}
+
+.table-issue{
+	.title-issue{
+		font-size: 14px;
+		position: relative;
+		top: -2px;
+	}
+    .issue-icons{
+		display:block;
+	}
+}
+
+.main-title{
+	margin:0 0 0 0;
+	padding:25px 0;
+	font-size:20px;
+	.container{
+		padding:0 28px;
+	}
+	.label{
+		border-radius: 6px;
+		position: relative;
+		padding:6px 10px 8px;
+		border:2px solid transparent;
+	}
+	a{
+		&:hover,
+		&:focus{
+			text-decoration: none;
+			opacity: 0.8;
+		}
+	}
+	.btn-group{
+		top:-1px;
+		.btn{
+			border-radius: 6px;
+		}
+	}
+	.dropdown-menu{
+		font-size:12px;
+		li{
+			padding:0;
+			margin:4px 0;
+		}
+	}
+}
+
+.list-issue-config-status{
+	li{
+		margin-bottom: 5px;
+	}
+}
+
+.notes{
+	.list-group-item{
+		.fa-trash{
+			opacity:0;
+		}
+		&:hover .fa-trash{
+			opacity:1;
+		}
+		p{
+			margin:0;
+		}
+		i{
+			margin:0 5px 0 0;
+		}
+	}
+}
+
+.team{
+
+}
+
+.feed-element{
+	display: block;
+	min-height:40px;
+	padding:0 0 7px;
+	margin:0 0 10px;
+	border-bottom: 1px solid #E6E9EE;
+    .avatar{
+        width:22px;
+        height:22px;
+		margin:3px 0 0 0;
+    }
+}
+
+.avatar{
+	width:32px;
+	height:32px;
+	border-radius: 4px;
+}
+>>>>>>> upstream/develop
 
   .ui.main.container{
     margin-top: 0px;

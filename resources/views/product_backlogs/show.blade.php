@@ -15,6 +15,7 @@
 
 @section('content')
 
+<<<<<<< HEAD
 <div class="ui menu">
     <div class="ui dropdown icon item">
         <i class="wrench icon"></i>&nbsp;
@@ -52,6 +53,14 @@
        data-toggle="modal" data-target="#modalLarge">{{trans('gitscrum.create-user-story')}}</a>
     <a href="{{route('sprints.create', ['slug_product_backlog' => $productBacklog->slug])}}" class="item"
        data-toggle="modal" data-target="#modalLarge">
+=======
+    <a href="{{route('user_stories.create', ['slug_product_backlog' => $productBacklog->slug])}}"
+        class="btn btn-block btn-primary"
+        data-toggle="modal" data-target="#modalLarge">{{trans('gitscrum.create-user-story')}}</a>
+    <a href="{{route('sprints.create', ['slug_product_backlog' => $productBacklog->slug])}}"
+        class="btn  btn-block btn-primary"
+        data-toggle="modal" data-target="#modalLarge">
+>>>>>>> upstream/develop
         {{trans('gitscrum.create-sprint')}}</a>
 
     <div class="right menu">

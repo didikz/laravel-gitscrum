@@ -12,6 +12,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use GitScrum\Classes\Github;
 use GitScrum\Classes\Gitlab;
+use Config;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Relation::morphMap(\Config::get('database.relation'));
+        Relation::morphMap(Config::get('database.relation'));
     }
 
     /**
@@ -28,11 +29,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Github', function () {
+        foreach (Config::get('app.services') as $service) {
+            $this->app->singleton($service, function () use ($service) {
+                $namespace = 'GitScrum\\Services\\' . $service;
+                return new $namespace();
+            });
+        }
+
+        $this->app->singleton('Github', function () {
             return new Github();
         });
 
-        $this->app->bind('Gitlab', function () {
+        $this->app->singleton('Gitlab', function () {
             return new Gitlab();
         });
     }

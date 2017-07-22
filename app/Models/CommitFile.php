@@ -1,6 +1,6 @@
 <?php
 /**
- * Laravel GitScrum <https://github.com/renatomarinho/laravel-gitscrum>
+ * Laravel GitScrum <https://github.com/GitScrum-Community/laravel-gitscrum>
  *
  * The MIT License (MIT)
  * Copyright (c) 2017 Renato Marinho <renato.marinho@s2move.com>
@@ -12,12 +12,15 @@ use GitScrum\Presenters\CommitFilePresenter;
 use Illuminate\Database\Eloquent\Model;
 use GitScrum\Scopes\CommitFileScope;
 use GitScrum\Scopes\GlobalScope;
+use GitScrum\Presenters\GlobalPresenter;
 
 class CommitFile extends Model
 {
     use CommitFileScope;
     use GlobalScope;
     use CommitFilePresenter;
+    use GlobalPresenter;
+
     /**
      * The database table used by the model.
      *

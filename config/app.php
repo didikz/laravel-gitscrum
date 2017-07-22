@@ -18,7 +18,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_TITLE', 'GitScrum'),
+    'name' => env('APP_TITLE', 'GitScrum Community'),
 
     /*
     |--------------------------------------------------------------------------
@@ -132,6 +132,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Services
+    |--------------------------------------------------------------------------
+    */
+
+    'services' => [
+        'AttachmentService',
+        'CommentService',
+        'ConfigStatusService',
+        'FavoriteService',
+        'IssueService'
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -187,7 +201,9 @@ return [
 
         Barryvdh\Debugbar\ServiceProvider::class,
 
-        Talevskiigor\ComposerBump\ComposerBumpServiceProvider::class
+        Talevskiigor\ComposerBump\ComposerBumpServiceProvider::class,
+
+        RenatoMarinho\LaravelMultiLanguage\MultiLanguageServiceProvider::class
 
     ],
 

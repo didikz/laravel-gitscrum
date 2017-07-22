@@ -14,6 +14,7 @@
 
 @extends('layouts.master')
 
+<<<<<<< HEAD
 @section('content')
 
 <div class="ui last container">
@@ -29,6 +30,12 @@
                 <div class="title">{{trans('gitscrum.step2')}}</div>
                 <div class="description">Enter billing information</div>
             </div>
+=======
+@section('breadcrumb')
+    <div class="nav-wizard">
+        <div class="col-lg-6">
+            <h3>{{trans('gitscrum.welcome-to')}} {{config('app.name')}}</h3>
+>>>>>>> upstream/develop
         </div>
         <div class="disabled step">
             <div class="content">
@@ -38,7 +45,22 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <div class="col-lg-12">
+=======
+@section('main-title')
+<p class="font-bold text-center">
+    @if($repositories->count())
+        {{trans('Congratulations')}}.
+        <span>{{trans('gitscrum.you-have-successfully-added-repositories-for')}} {{config('app.name')}}</span>
+    @else
+        {{trans('gitscrum.choose-at-least-one-repository')}}.
+        <span>{{trans('gitscrum.you-can-click')}} <a href="{{route('wizard.step1')}}">{{trans('gitscrum.here')}}</a>
+            {{trans('gitscrum.to-try-again')}}</span>
+    @endif
+</p>
+@endsection
+>>>>>>> upstream/develop
 
     @include('partials.boxes.repositories', ['list'=>$repositories])
 
@@ -48,6 +70,7 @@
             <div class="row">
                 <div class="column main-column">
 
+<<<<<<< HEAD
                     <div class="ui two column grid">
                         @if(count($repositories))
                         <div class="column button-column">
@@ -76,6 +99,15 @@
             </div>
 
         </div>
+=======
+        @if(count($repositories))
+        <a href="{{route('wizard.step3')}}" class="btn btn-lg btn-success btn-loader">{{trans('gitscrum.import-my')}}
+            <strong>{{Auth::user()->provider}} {{trans('gitscrum.issues')}}</strong></a>
+        <span>&nbsp;&nbsp;&nbsp;<strong>{{trans('gitscrum.or')}}</strong>&nbsp;&nbsp;&nbsp;</span>
+        @endif
+        <a href="{{route('product_backlogs.index')}}" class="btn btn-lg btn-default">{{trans('gitscrum.continue-using')}}
+            <strong>{{config('app.name')}}</strong></a>
+>>>>>>> upstream/develop
     </div>
 
 </div>

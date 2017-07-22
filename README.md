@@ -1,5 +1,11 @@
-![Laravel GitScrum](http://i.imgur.com/fJLrnxu.png)
+![Laravel GitScrum](https://gitscrum.com/facebook.jpg)
 
+<hr>
+<p align="center">
+Site: <b>https://www.gitscrum.com</b> | 
+Community and Issues : <b>https://www.gitscrum.com/community</b>
+</p>
+<hr>
 <p align="center">
 <b><a href="#overview">Overview</a></b>
 |
@@ -18,9 +24,10 @@
 
 <hr>
 
-[![Build Status](https://travis-ci.org/renatomarinho/laravel-gitscrum.svg?branch=master)](https://travis-ci.org/renatomarinho/laravel-gitscrum)
+[![Laravel 5.4](https://img.shields.io/badge/Laravel-5.4-brightgreen.svg?style=flat-square)](http://laravel.com)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2abfe5173e0b4565a2b1e3e345160939)](https://www.codacy.com/app/renatomarinho/laravel-gitscrum?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=renatomarinho/laravel-gitscrum&amp;utm_campaign=Badge_Grade)
 [![Total Downloads](https://poser.pugx.org/renatomarinho/laravel-gitscrum/downloads)](https://packagist.org/packages/renatomarinho/laravel-gitscrum)
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/GitScrum-Community/laravel-gitscrum/blob/master/LICENSE.md)
 
 <hr>
 
@@ -28,7 +35,10 @@
 
 Laravel GitScrum is a **free application** developed in Laravel 5.4. The aim is help the developer teams to use **Git** and **Scrum** on task management of the day-to-day.
 
-Available in English, Chinese, Portuguese and Italian.
+Available in English, Chinese, Russian, German, Arabic, Spanish, Portuguese, Italian, French, Indonesian and Hungarian.
+
+
+Laravel GitScrum in gitter.im : [https://gitter.im/laravel-gitscrum/Lobby](https://gitter.im/laravel-gitscrum/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ### Features
 
@@ -63,7 +73,7 @@ The requirements to Laravel GitScrum application is:
 ### Composer Package
 
 ```
-$ composer create-project renatomarinho/laravel-gitscrum --stability=dev --keep-vcs
+$ composer create-project renatomarinho/laravel-gitscrum --stability=stable --keep-vcs
 $ cd laravel-gitscrum
 ```
 **Important**: If you have not yet installed composer: [Installation - Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
@@ -72,7 +82,7 @@ $ cd laravel-gitscrum
 ### Git Clone
 
 ```
-$ git clone git@github.com:renatomarinho/laravel-gitscrum.git
+$ git clone git@github.com:GitScrum-Community/laravel-gitscrum.git
 $ cd laravel-gitscrum
 $ composer update
 $ composer run-script post-root-package-install
@@ -93,14 +103,14 @@ APP_URL=http://yourdomain.tld (you must use protocol http or https)
 
 #### Language
 
-Options: en | zh | pt | it
+Options: en | zh | zh_cn | ru | de | es | pt | it | id | fr | hu
 
 .env file
 
 ```
 APP_LANG=en
 ```
-Can you help us translate a few phrases into different languages? See: https://github.com/renatomarinho/laravel-gitscrum/tree/feature/language-pack/resources/lang
+Can you help us translate a few phrases into different languages? See: https://github.com/GitScrum-Community/laravel-gitscrum/tree/feature/language-pack/resources/lang
 
 
 #### Database
@@ -183,7 +193,8 @@ PROXY_PASS=
 ![Screenshot 0](http://i.imgur.com/D954dbU.png)
 
 <br>
-### Database schema 
+
+## Database schema 
 
 ![Screenshot 1](http://i.imgur.com/zdrEkkf.png)
 
@@ -191,7 +202,7 @@ PROXY_PASS=
 
 ## Questions and issues
 
-The [github issue tracker](https://github.com/renatomarinho/laravel-gitscrum/issues) is **_only_** for bug reports and feature requests. Anything else, such as questions for help in using the Laravel Gitscrum, should be posted in [StackOverflow](http://stackoverflow.com/questions/tagged/gitscrum) under tag `gitscrum`.
+The [github issue tracker](https://github.com/GitScrum-Community/laravel-gitscrum/issues) is **_only_** for bug reports and feature requests. Anything else, such as questions for help in using the Laravel Gitscrum, should be posted in [StackOverflow](http://stackoverflow.com/questions/tagged/gitscrum) under tag `gitscrum`.
 
 ### Do you need help?
 
@@ -200,16 +211,7 @@ Renato Marinho: [Facebook](https://www.facebook.com/renato.marinho) / [LinkedIn]
 
 ## Contributing
 
-Contributions are always welcome! Please read the contribution guidelines first.
-
-```
-    Create an issue and describe your idea
-    Fork it
-    Create your feature branch (git checkout -b my-new-feature)
-    Commit your changes (git commit -am 'Add some feature')
-    Publish the branch (git push origin my-new-feature)
-    Create a new Pull Request
-```
+Contributions are always welcome! https://github.com/GitScrum-Community/laravel-gitscrum/graphs/contributors
 
 
 ## License
@@ -218,6 +220,8 @@ Laravel GitScrum is licensed under the [MIT license](https://opensource.org/lice
 
 
 ## Thanks
+
+#### Translate Team : [@orionlu0916](https://github.com/orionlu0916) , [@Bebbolus](https://github.com/Bebbolus) , [@dongm2ez](https://github.com/dongm2ez), [@rizalio](https://github.com/rizalio), [@ddmler](https://github.com/ddmler), [@Assada](https://github.com/Assada), [@edbizarro](https://github.com/edbizarro), [@ngabor84](https://github.com/ngabor84), [@MarwanMohamed](https://github.com/MarwanMohamed) and Manuel Ortega
 
 - [Laravel PHP Framework](https://github.com/laravel/laravel)
 

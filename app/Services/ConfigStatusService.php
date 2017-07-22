@@ -1,25 +1,18 @@
 <?php
 /**
- * Laravel GitScrum <https://github.com/renatomarinho/laravel-gitscrum>
+ * Laravel GitScrum <https://github.com/GitScrum-Community/laravel-gitscrum>
  *
  * The MIT License (MIT)
  * Copyright (c) 2017 Renato Marinho <renato.marinho@s2move.com>
  */
 
-namespace GitScrum\Http\Controllers;
+namespace GitScrum\Services;
 
 use Illuminate\Http\Request;
 use GitScrum\Models\ConfigStatus;
 
-class ConfigStatusController extends Controller
+class ConfigStatusService
 {
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function updatePosition(Request $request)
     {
         try {
@@ -31,13 +24,9 @@ class ConfigStatusController extends Controller
                 ++$position;
             }
 
-            return response()->json([
-                'success' => true,
-            ]);
+            return true;
         } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-            ]);
+            return false;
         }
     }
 }

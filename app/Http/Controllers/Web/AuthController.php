@@ -6,11 +6,10 @@
  * @license http://opensource.org/licenses/GPL-3.0 GPLv3
  */
 
-namespace GitScrum\Http\Controllers\Auth;
+namespace GitScrum\Http\Controllers\Web;
 
 use GitScrum\Http\Requests\AuthRequest;
 use GitScrum\Models\User;
-use GitScrum\Http\Controllers\Controller;
 use Socialite;
 use Auth;
 use SocialiteProviders\Manager\Exception\InvalidArgumentException;
@@ -32,18 +31,6 @@ class AuthController extends Controller
         Auth::logout();
 
         return redirect()->route('home');
-    }
-
-    public function doLogin(AuthRequest $request)
-    {
-    }
-
-    public function register()
-    {
-    }
-
-    public function doRegister()
-    {
     }
 
     public function redirectToProvider($provider)

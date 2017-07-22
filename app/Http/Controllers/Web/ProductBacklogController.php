@@ -1,17 +1,16 @@
 <?php
 /**
- * Laravel GitScrum <https://github.com/renatomarinho/laravel-gitscrum>
+ * Laravel GitScrum <https://github.com/GitScrum-Community/laravel-gitscrum>
  *
  * The MIT License (MIT)
  * Copyright (c) 2017 Renato Marinho <renato.marinho@s2move.com>
  */
 
-namespace GitScrum\Http\Controllers;
+namespace GitScrum\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
 use GitScrum\Http\Requests\ProductBacklogRequest;
 use GitScrum\Models\ProductBacklog;
-use GitScrum\Classes\Helper;
 use Auth;
 
 class ProductBacklogController extends Controller
@@ -23,7 +22,7 @@ class ProductBacklogController extends Controller
      */
     public function index(Request $request, $mode = 'default')
     {
-        $backlogs = Helper::lengthAwarePaginator(Auth::user()->productBacklogs(), $request->page);
+        $backlogs = ProductBacklog::paginate($request->page);
         return view('product_backlogs.index-'.$mode)
             ->with('backlogs', $backlogs);
     }
